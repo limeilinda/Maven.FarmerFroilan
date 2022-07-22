@@ -10,7 +10,6 @@ import java.util.List;
 
 public abstract class Animal implements NoiseMaker, Eater {
     List<Edible> foodEaten;
-    List<Rideable> rideableList;
 
     public Animal(){
         foodEaten = new ArrayList<>();
@@ -32,22 +31,5 @@ public abstract class Animal implements NoiseMaker, Eater {
     public String makeNoise(){
         return "";
     }
-
-    public void mount(Rideable rideable) {
-        rideableList.add(rideable);
-    }
-
-    public void dismount(Rideable rideable) {
-        rideableList.remove(rideable);
-    }
-
-    public Boolean riddenStatus(Rideable rideable) {
-        if (rideableList.contains(rideable)) {
-            return true;
-        }
-        return null;
-    }
-
-
 
 }

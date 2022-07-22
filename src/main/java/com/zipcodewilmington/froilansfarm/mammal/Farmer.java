@@ -41,11 +41,14 @@ public class Farmer extends Person implements Botanist, Rider {
 
     @Override
     public <T extends Rideable> void dismount(T Rideable) {
-        this.ride = Rideable;
+        this.ride = null;
     }
 
     public Boolean riderStatus() {
-        return this.ride;
+        if(this.ride==null){
+            return false;
+        }
+        return true;
     }
 
 }

@@ -13,5 +13,5 @@ public interface Rider {
 
     <T extends Rideable> void dismount(T Rideable);
 
-    <T extends Rideable> void riderStatus();
+    Boolean riderStatus();
 }
