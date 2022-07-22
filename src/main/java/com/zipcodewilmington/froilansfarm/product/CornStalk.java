@@ -8,5 +8,4 @@ public class CornStalk extends Crop<EarCorn> {
         super(new EarCorn());
     }
 
-
 }
