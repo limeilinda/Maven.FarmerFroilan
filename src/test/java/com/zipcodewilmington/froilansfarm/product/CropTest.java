@@ -57,6 +57,17 @@ class CropTest {
     }
 
     @Test
+    void testHarvestWhenYieldIsNull() {
+        tomatoCrop.yield = null;
+        tomatoCrop.isFertilized = true;
+        tomatoCrop.setHasBeenHarvested(false);
+
+        Tomato actualTomato = tomatoCrop.harvestYield();
+
+        Assert.assertNull(actualTomato);
+    }
+
+    @Test
     void testGrowYield() {
         EarCorn expectedEarCorn = new EarCorn();
         cornCrop.setFertilized(true);
