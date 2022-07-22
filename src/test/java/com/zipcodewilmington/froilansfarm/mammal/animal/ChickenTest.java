@@ -33,13 +33,13 @@ class ChickenTest {
     @org.junit.jupiter.api.Test
     public void testYield(){
         chicken.hasBeenFertilized=false;
-        Egg actual= chicken.yield();
+        Egg actual= chicken.harvestYield();
         Assert.assertTrue(actual instanceof Egg);
     }
     @org.junit.jupiter.api.Test
     public void testFailYield(){
         chicken.hasBeenFertilized=true;
-        Egg actual= chicken.yield();
+        Egg actual= chicken.harvestYield();
         Assert.assertFalse(actual instanceof Egg);
     }
     @org.junit.jupiter.api.Test

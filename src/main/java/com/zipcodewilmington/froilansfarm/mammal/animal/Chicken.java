@@ -18,7 +18,9 @@ public class Chicken extends Animal implements Produce<Egg>{
     public String makeNoise() {
         return "bak bak";
     }
-    public Egg yield() {
+
+
+    public Egg harvestYield() {
         if(!hasBeenFertilized==true) {
             return egg;
         }
@@ -28,5 +30,6 @@ public class Chicken extends Animal implements Produce<Egg>{
     public boolean hasBeenFertilized() {
         return false;
     }
+
 
 }
