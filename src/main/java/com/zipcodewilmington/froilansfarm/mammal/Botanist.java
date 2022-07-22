@@ -6,4 +6,5 @@ import com.zipcodewilmington.froilansfarm.product.edible.Edible;
 
 public interface Botanist {
     <T extends Crop<? extends Edible>> void plantCrops(T crop, CropRow<T> row);
+
 }
