@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.mammal.animal;
 
 import com.zipcodewilmington.froilansfarm.Rideable;
+import com.zipcodewilmington.froilansfarm.mammal.Farmer;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
@@ -19,12 +20,26 @@ class HorseTest {
     }
 
     @Test
-    void makeNoise() {
+    public void testMakeNoise() {
         String actual = horse.makeNoise();
         String expected = "NEIGH!!!";
 
         Assert.assertEquals(actual,expected);
     }
 
-
+    @Test
+    public void testRidingStatusMounted(){
+        Farmer farmer = new Farmer();
+        farmer.mount(horse);
+        boolean actual = farmer.riderStatus();
+        Assert.assertTrue(actual);
+    }
+    @Test
+    public void testRidingStatusDismounted(){
+        Farmer farmer = new Farmer();
+        farmer.dismount(horse);
+        boolean actual = farmer.riderStatus();
+        Assert.assertFalse(actual);
+    }
+    
 }

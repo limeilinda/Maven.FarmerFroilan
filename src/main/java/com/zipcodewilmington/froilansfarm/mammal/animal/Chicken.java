@@ -19,7 +19,6 @@ public class Chicken extends Animal implements Produce<Egg>{
         return "bak bak";
     }
 
-
     public Egg harvestYield() {
         if(!hasBeenFertilized==true) {
             return egg;

@@ -19,7 +19,11 @@ class ChickenTest {
     EarCorn corn = new EarCorn();
     Egg egg = new Egg();
 
-
+    @org.junit.jupiter.api.Test
+    public void makeNoiseTest(){
+    String expected = "bak bak";
+    Assert.assertEquals(expected, chicken.makeNoise());
+}
     @org.junit.jupiter.api.Test
     public void testImplementation() {
         Assert.assertTrue(chicken instanceof Produce);
@@ -60,10 +64,5 @@ class ChickenTest {
         Assert.assertEquals(actual,expected);
         Assert.assertEquals(actual1,expected1);
         Assert.assertFalse(String.valueOf(actual2),expected2); //if Asserttrue. it fails as it should! cause chicken didnt eat egg!
-
     }
-
-
-
-
 }
