@@ -8,14 +8,18 @@ import com.zipcodewilmington.froilansfarm.product.edible.Edible;
 import com.zipcodewilmington.froilansfarm.structure.Farm;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Farmer extends Person implements Botanist, Rider {
 
     Farm farm;
 
-    Farmer farmer;
-
     Rideable ride;
+    Crop crop;
+
+
+
+
 
     public Farmer(){
         super();
@@ -30,7 +34,8 @@ public class Farmer extends Person implements Botanist, Rider {
     }
 
     public <T extends Crop<? extends Edible>> void plantCrops(T crop, CropRow<T> row) {
-
+        this.crop = crop;
+        row.add(crop);
     }
 
 

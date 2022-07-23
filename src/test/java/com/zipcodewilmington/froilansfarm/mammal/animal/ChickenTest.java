@@ -60,10 +60,5 @@ class ChickenTest {
         Assert.assertEquals(actual,expected);
         Assert.assertEquals(actual1,expected1);
         Assert.assertFalse(String.valueOf(actual2),expected2); //if Asserttrue. it fails as it should! cause chicken didnt eat egg!
-
     }
-
-
-
-
 }

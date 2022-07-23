@@ -19,8 +19,6 @@ public abstract class Animal implements NoiseMaker, Eater {
         foodEaten.add(edible);
     }
 
-
-
     public Boolean hasEaten(Edible edible) {
         if(foodEaten.contains(edible)){
             return true;
