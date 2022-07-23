@@ -19,7 +19,11 @@ class ChickenTest {
     EarCorn corn = new EarCorn();
     Egg egg = new Egg();
 
-
+    @org.junit.jupiter.api.Test
+    public void makeNoiseTest(){
+    String expected = "bak bak";
+    Assert.assertEquals(expected, chicken.makeNoise());
+}
     @org.junit.jupiter.api.Test
     public void testImplementation() {
         Assert.assertTrue(chicken instanceof Produce);

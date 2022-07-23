@@ -13,7 +13,6 @@ import java.util.List;
 public class Farmer extends Person implements Botanist, Rider {
 
     Farm farm;
-
     Rideable ride;
     Crop crop;
 
