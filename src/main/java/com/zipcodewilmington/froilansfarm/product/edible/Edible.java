@@ -6,11 +6,11 @@ public abstract class Edible {
     public Edible() {
         isEaten = false;
     }
-    boolean isEaten() {
+    public boolean isEaten() {
         return isEaten;
     }
 
-    void setIsEaten(boolean isEaten) {
+    public void setIsEaten(boolean isEaten) {
         this.isEaten = isEaten;
     }
 
