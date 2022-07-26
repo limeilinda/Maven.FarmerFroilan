@@ -15,13 +15,13 @@ class AnimalTest {
     public void testAnimal() {
         Chicken chicken = new Chicken();
         Tomato tomato = new Tomato();
-        EarCorn corn = new EarCorn();
         chicken.eat(tomato);
-        chicken.eat(corn);
 
-        List<Edible> foodEaten = chicken.getFoodEaten();
+        Boolean expected = true;
+        Boolean actual = chicken.hasEaten(tomato);
 
-        Assert.assertEquals(tomato, foodEaten.get(0));
-        Assert.assertEquals(corn, foodEaten.get(1));
+        Assert.assertEquals(expected, actual);
+
+
     }
 }
