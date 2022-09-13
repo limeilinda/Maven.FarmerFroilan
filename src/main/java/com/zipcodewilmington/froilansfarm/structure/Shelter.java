@@ -15,15 +15,14 @@ public abstract class Shelter<T> {
     }
 
 
-
     public void add(T item){
         items.add(item);
-
     }
 
     public void remove(T item) {
         items.remove(item);
     }
+
 
     public T get(T item) {
         if (items.contains(item)) {

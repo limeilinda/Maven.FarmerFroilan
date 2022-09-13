@@ -22,8 +22,8 @@ public abstract class Vehicle implements NoiseMaker, Rideable {
         }
     }
     public void fly(Field field) {
-        for(CropRow r:field.getCropRow()){
-            this.fertilize(r);
-        }
+//        for(CropRow r: field.getCropRow()) {
+//            this.fertilize(r);
+//        }
     }
 }
